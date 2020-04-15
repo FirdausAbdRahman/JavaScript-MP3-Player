@@ -1,0 +1,117 @@
+body{
+    background: black;
+}
+
+#bg{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    margin: auto;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    filter:blur(5px);
+}
+
+.container{
+    position: absolute;
+    height: 400pt;
+    width: 250pt;
+    margin: auto;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(96, 6, 180);
+    border-radius: 8px;
+    box-shadow: 0 0 50px black;
+}
+
+.song-name{
+    position: absolute;
+    height: 190pt;
+    width: 400pt;
+    background: linear-gradient(45deg, rgb(72,0,138), rgb(0,199,149));
+    filter: blur(30px);
+    top: -25%;
+}
+
+.box{
+    position: absolute;
+    height: 190pt;
+    width: 400pt;
+    background: linear-gradient(45deg, rgb(72,0,138), rgb(0,199,149));
+    filter: blur(30px);
+    bottom: -15%;
+}
+
+.song-title{
+    position: absolute;
+    font-family: cursive, sans-serif;
+    font-size: 30px;
+    top: 10%;
+    color: white;
+}
+
+#play-pause{
+    position:absolute;
+    height: 50px;
+    width: 20px;
+    color: white;
+    cursor: pointer;
+    bottom: 12%;
+}
+
+#next-song, #previous-song{
+    position: absolute;
+    height: 50px;
+    width: 30px;
+    color: white;
+    cursor: pointer;
+    bottom: 12%;
+}
+
+#next-song{
+    right: 11%;
+}
+
+#previous-song{
+    left: 17%;
+}
+
+input[type=range]{
+    -webkit-appearance: none;
+    position: absolute;
+    width: 160pt;
+    bottom: 7%;
+
+}
+
+input[type=range]::-webkit-slider-runnable-track{
+    background:black;
+    width: 30px;
+    height: 5px;
+    border:none;
+    border-radius: 3px;
+}
+
+input[type=range]::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    border: none;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background: white;
+    margin-top: -4px;
+    cursor: pointer;
+}
+
+input[type=range]:focus {
+    outline: none;
+}
