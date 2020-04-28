@@ -4,12 +4,15 @@ const background = document.querySelector("#bg");
 const pp = document.querySelector("#play-pause");
 const progressBar = document.querySelector("#progressBar");
 const song = document.querySelector("#song");
+const repeatSong = document.querySelector("#repeat-song");
+const moreOptions = document.querySelector("#more-options");
 
 let playing = true;
 
 let songs = ["/album/LP-InTheEnd.mp3", "/album/LP-NewDivide.mp3"], songIndex = 0;
 let thumbnails = ["/album/LP-InTheEnd.jpg", "/album/LP-NewDivide.jpg"];
 let songNames = ["Linkin Park- In The End", "Linkin Park - New Divide"];
+let songStatus = ["fa-random", ]; //to make it changes when clicked
 
 function playPause(){
     if(playing){
@@ -63,4 +66,8 @@ setInterval(updateProgressValue, 700);
 
 function changeProgressValue(){
     song.currentTime = progressBar.value;
+}
+
+function songStatus(){
+
 }

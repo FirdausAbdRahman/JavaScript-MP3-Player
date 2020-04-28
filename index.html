@@ -20,8 +20,15 @@
         <i class="fas fa-play fa-2x" alt="play-pause" onclick ="playPause()" id="play-pause"></i>
         <i class="fas fa-angle-right fa-2x" alt="nextSong" onclick ="nextSong()" id="next-song"></i>
         <i class="fas fa-angle-left fa-2x" alt="previousSong" onclick="previousSong()" id="previous-song"></i>
+        <i class="fas fa-repeat" alt="repeatSong" id="repeat-song" onclick="songStatus()"></i>
+        <i class="fas fa-ellipsis-v" alt="more" id="more-options"></i>
         <input type="range" id="progressBar" min="0" max="" onchange="changeProgressValue()" value="0"/>
     </div>
+    <ul id="list-of-options">
+        <li><i class="fas fa-download"></i></li>
+        <li><i class="fas fa-download"></i></li>
+        <li><i class="fas fa-download"></i></li>
+    </ul>
 
     <footer>Hak Cipta Terpelihara</footer>
 
