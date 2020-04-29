@@ -87,9 +87,14 @@ transition: 1s;
     height: 50px;
     width: 30px;
     color: white;
-    cursor: pointer;
     bottom: 12%;
 }
+
+#next-song, #previous-song, #repeat-song, #more-options, 
+#list-of-options li{
+    cursor: pointer;
+}
+
 
 #next-song{
     right: 23%;
