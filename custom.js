@@ -5,14 +5,17 @@ const pp = document.querySelector("#play-pause");
 const progressBar = document.querySelector("#progressBar");
 const song = document.querySelector("#song");
 const repeatSong = document.querySelector("#repeat-song");
-const moreOptions = document.querySelector("#more-options");
+const moreOpt = document.querySelector("#more-options");
+const listOfOptions = document.querySelector("#list-of-options");
+const options = document.querySelector("#options");
 
 let playing = true;
+let clicking = true;
 
-let songs = ["/album/LP-InTheEnd.mp3", "/album/LP-NewDivide.mp3"], songIndex = 0;
-let thumbnails = ["/album/LP-InTheEnd.jpg", "/album/LP-NewDivide.jpg"];
-let songNames = ["Linkin Park- In The End", "Linkin Park - New Divide"];
-let songStatus = ["fa-random", ]; //to make it changes when clicked
+let songs = ["/album/LP-InTheEnd.mp3", "/album/LP-NewDivide.mp3", "/album/Spektrem-Shine.mp3", "/album/AW-AllFallDown.mp3"], songIndex = 0;
+let thumbnails = ["/album/LP-InTheEnd.jpg", "/album/LP-NewDivide.jpg", "/album/Spektrem-Shine.jpg", "/album/AW-AllFallDown.png" ];
+let songNames = ["Linkin Park- In The End", "Linkin Park - New Divide", "Spektrem - Shine", "Alan Walker - All Fall Down"];
+//let songStatus = ["fa-random", ]; //to make it changes when clicked
 
 function playPause(){
     if(playing){
@@ -35,7 +38,7 @@ function playPause(){
 
 function nextSong(){
     songIndex++;
-    if(songIndex > 1) songIndex = 0;
+    if(songIndex > 3) songIndex = 0;
     song.src = songs[songIndex];
     thumbnail.src = thumbnails[songIndex];
     pp.classList.remove("fa-play");
@@ -47,7 +50,7 @@ function nextSong(){
 
 function previousSong(){
     songIndex--;
-    if(songIndex < 0) songIndex = 1;
+    if(songIndex < 0) songIndex = 3;
     song.src = songs[songIndex];
     thumbnail.src = thumbnails[songIndex];
     pp.classList.remove("fa-play");
@@ -68,6 +71,15 @@ function changeProgressValue(){
     song.currentTime = progressBar.value;
 }
 
-function songStatus(){
-
+function moreOptions(){
+    if(clicking){
+        listOfOptions.style.visibility= "visible";
+        options.style.visibility = "visible";
+        clicking = false;
+    }else{
+        clicking = true;
+        listOfOptions.style.visibility= "hidden";
+        options.style.visibility = "hidden";
+    }
+    
 }
